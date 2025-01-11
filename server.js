@@ -24,7 +24,7 @@ app.use(cors(corsOptions));
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
+//app.use(cors())
 
 // Connect to Database
 connectDB();
