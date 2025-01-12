@@ -19,7 +19,7 @@ router.post('/signup', async (req, res) => {
         const existingUser = await User.findOne({ email });
         console.log(existingUser)
         if (existingUser) {
-            return res.status(400).json({ message: 'Email already registered' });
+            return res.status(400).json({ message: 'Email already registered please log in' });
         }
 
         // Hash password before saving it
@@ -46,7 +46,7 @@ router.post('/login', async (req, res) => {
         // Find user by email
         const user = await User.findOne({ email });
         if (!user) {
-            return res.status(404).json({ message: 'User not found' });
+            return res.status(404).json({ message: 'User not found sign up first' });
         }
 
         // Compare passwords
