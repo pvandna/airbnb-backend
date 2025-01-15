@@ -42,7 +42,7 @@ app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
 
-
+module.exports = app; // Ensure the app is exported for live on vercel
 
 
 
